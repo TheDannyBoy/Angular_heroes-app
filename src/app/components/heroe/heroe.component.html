@@ -1,0 +1,34 @@
+<h1> {{ heroe.nombre }} <small> {{ heroe.aparicion }} </small></h1>
+<hr>
+
+<div class="row">
+
+  <div class="col-md-4">
+
+    <img [src]="heroe.img" alt="img-fluid" alt="">
+    <br><br>
+    <a class="btn btn-outline-danger btn-black" [routerLink]="['/heroes']">Regresar</a>
+
+  </div>
+
+  <div class="col-md-8">
+    <h3> {{ heroe.nombre }} </h3>
+    <hr>
+    <p>
+      {{ heroe.bio }}
+    </p>
+  </div>
+
+  <div>
+  <!-- <div *ngIf="verCasa(); then thenBlock; else elseBlock"> -->
+    <img [src]="heroe.casa == 'DC' ? 'assets/images/marvel.jpeg' : 'assets/images/dc.png'" alt="">
+  </div>
+
+  <!-- <ng-template #thenBlock>
+    <img src="assets/images/marvel.jpeg" alt="Marvel">
+  </ng-template>
+  <ng-template #elseBlock>
+    <img src="assets/images/dc.png" alt="DC">
+  </ng-template> -->
+
+</div>
